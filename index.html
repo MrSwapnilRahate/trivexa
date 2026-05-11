@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRIVEXA — Engineering Premium Digital Experiences</title>
+<meta name="description" content="TRIVEXA builds enterprise-grade digital platforms, SaaS products and AI-powered experiences for ambitious modern businesses worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<!-- Loading -->
+<div class="loading-screen"><div class="loading-logo">TRIV<span>EXA</span></div></div>
+
+<!-- Nav -->
+<nav class="nav" id="navbar">
+<div class="nav__inner">
+<a href="index.html" class="nav__logo">TRIV<span>EXA</span></a>
+<div class="nav__links">
+<a href="index.html" class="nav__link nav__link--active">Home</a>
+<a href="#services" class="nav__link">Services</a>
+<a href="#projects" class="nav__link">Projects</a>
+<a href="#about" class="nav__link">About</a>
+<a href="#contact" class="nav__link">Contact</a>
+</div>
+<a href="#contact" class="btn btn--primary btn--sm nav__cta">Get Started</a>
+<div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+<a href="index.html" class="mobile-menu__link">Home</a>
+<a href="#services" class="mobile-menu__link">Services</a>
+<a href="#projects" class="mobile-menu__link">Projects</a>
+<a href="#about" class="mobile-menu__link">About</a>
+<a href="#contact" class="mobile-menu__link">Contact</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+<div class="hero__bg">
+<div class="hero__grid"></div>
+<div class="hero__glow hero__glow--1"></div>
+<div class="hero__glow hero__glow--2"></div>
+<canvas id="hero-particles" class="hero__particles"></canvas>
+</div>
+<div class="container">
+<div class="hero__inner">
+<div class="hero__content" data-reveal="fade-up">
+<div class="hero__label"><span class="pulse-dot"></span> Enterprise Technology Partner</div>
+<h1 class="hero__title">Engineering <span class="highlight">Premium Digital</span> Experiences</h1>
+<p class="hero__desc">TRIVEXA builds enterprise-grade digital platforms, SaaS products and AI-powered experiences for ambitious modern businesses worldwide.</p>
+<div class="hero__actions">
+<a href="#contact" class="btn btn--primary btn--lg">Start A Project <span class="btn-arrow">→</span></a>
+<a href="#projects" class="btn btn--outline btn--lg">View Our Work</a>
+</div>
+</div>
+<div class="hero__visual" data-reveal="fade-up" data-delay="2">
+<div class="hero__dashboard">
+<div class="hero__dashboard-main">
+<div class="dashboard-header">
+<span class="dashboard-header__title">Analytics Overview</span>
+<span class="dashboard-header__badge">● Live</span>
+</div>
+<div class="dashboard-metrics">
+<div class="metric-card">
+<div class="metric-card__label">Revenue</div>
+<div class="metric-card__value">$2.4M</div>
+<div class="metric-card__change">↑ 24.5%</div>
+</div>
+<div class="metric-card">
+<div class="metric-card__label">Users</div>
+<div class="metric-card__value">48.2K</div>
+<div class="metric-card__change">↑ 18.3%</div>
+</div>
+<div class="metric-card">
+<div class="metric-card__label">Growth</div>
+<div class="metric-card__value">94.7%</div>
+<div class="metric-card__change">↑ 12.1%</div>
+</div>
+</div>
+<div class="dashboard-chart">
+<svg width="100%" height="100%" viewBox="0 0 400 120" preserveAspectRatio="none">
+<defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(212,175,55,0.3)"/><stop offset="100%" stop-color="rgba(212,175,55,0)"/></linearGradient></defs>
+<path d="M0,100 Q50,80 100,60 T200,40 T300,50 T400,20" fill="none" stroke="#D4AF37" stroke-width="2" class="chart-line"/>
+<path d="M0,100 Q50,80 100,60 T200,40 T300,50 T400,20 L400,120 L0,120 Z" fill="url(#cg)" opacity="0.5"/>
+</svg>
+</div>
+</div>
+<div class="hero__float-card hero__float-card--1">
+<div class="float-card__icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+<div class="float-card__title">Performance</div>
+<div class="float-card__value">99.9%</div>
+<div class="float-card__sub">Uptime Score</div>
+</div>
+<div class="hero__float-card hero__float-card--2">
+<div class="float-card__icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg></div>
+<div class="float-card__title">Conversion</div>
+<div class="float-card__value">+340%</div>
+<div class="float-card__sub">Average Increase</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Trust -->
+<section class="trust" id="trust">
+<p class="trust__label">Trusted By Industry Leaders</p>
+<div class="trust__track">
+<span class="trust__logo">Microsoft</span><span class="trust__logo">Google</span><span class="trust__logo">Amazon</span><span class="trust__logo">Stripe</span><span class="trust__logo">Shopify</span><span class="trust__logo">Vercel</span><span class="trust__logo">Netflix</span><span class="trust__logo">Airbnb</span>
+<span class="trust__logo">Microsoft</span><span class="trust__logo">Google</span><span class="trust__logo">Amazon</span><span class="trust__logo">Stripe</span><span class="trust__logo">Shopify</span><span class="trust__logo">Vercel</span><span class="trust__logo">Netflix</span><span class="trust__logo">Airbnb</span>
+</div>
+</section>
+
+<!-- Services -->
+<section class="section section--glow" id="services">
+<div class="container">
+<div class="section-header" data-reveal="fade-up">
+<span class="label">What We Do</span>
+<h2>Premium Digital <span class="text-gradient">Services</span></h2>
+<p class="section-subtitle">We deliver enterprise-grade solutions that drive growth, scale operations, and create unforgettable digital experiences.</p>
+</div>
+<div class="services__grid">
+<div class="service-card" data-reveal="fade-up" data-delay="1">
+<div class="service-card__icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+<h3 class="service-card__title">Enterprise Websites</h3>
+<p class="service-card__text">Premium, high-converting websites built for scale with cutting-edge technology and world-class design.</p>
+</div>
+<div class="service-card" data-reveal="fade-up" data-delay="2">
+<div class="service-card__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+<h3 class="service-card__title">SaaS Engineering</h3>
+<p class="service-card__text">Full-stack SaaS product development from concept to scale with modern architecture and premium UX.</p>
+</div>
+<div class="service-card" data-reveal="fade-up" data-delay="3">
+<div class="service-card__icon"><svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.57-3.25 3.92L12 22l-.75-12.08A4.001 4.001 0 0 1 12 2z"/><circle cx="12" cy="6" r="1"/></svg></div>
+<h3 class="service-card__title">AI Solutions</h3>
+<p class="service-card__text">Intelligent AI-powered systems that automate workflows, enhance decisions, and transform business operations.</p>
+</div>
+<div class="service-card" data-reveal="fade-up" data-delay="4">
+<div class="service-card__icon"><svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/><circle cx="12" cy="19" r="2"/></svg></div>
+<h3 class="service-card__title">UI/UX Architecture</h3>
+<p class="service-card__text">Research-driven design systems that create intuitive, beautiful, and high-converting user experiences.</p>
+</div>
+<div class="service-card" data-reveal="fade-up" data-delay="5">
+<div class="service-card__icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+<h3 class="service-card__title">Branding Systems</h3>
+<p class="service-card__text">Premium brand identities that communicate trust, authority, and innovation at the highest level.</p>
+</div>
+<div class="service-card" data-reveal="fade-up" data-delay="6">
+<div class="service-card__icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+<h3 class="service-card__title">Enterprise Platforms</h3>
+<p class="service-card__text">Scalable, secure enterprise software systems engineered for performance and long-term growth.</p>
+</div>
+<div class="service-card" data-reveal="fade-up" data-delay="7">
+<div class="service-card__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m-7-7h6m6 0h6"/><path d="M17.66 6.34l-4.24 4.24m-2.83 2.83L6.34 17.66M17.66 17.66l-4.24-4.24m-2.83-2.83L6.34 6.34"/></svg></div>
+<h3 class="service-card__title">Digital Transformation</h3>
+<p class="service-card__text">End-to-end digital transformation strategies that modernize operations and drive competitive advantage.</p>
+</div>
+<div class="service-card" data-reveal="fade-up" data-delay="8">
+<div class="service-card__icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+<h3 class="service-card__title">Performance Optimization</h3>
+<p class="service-card__text">Data-driven optimization that maximizes conversions, speed, and overall digital performance metrics.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Stats -->
+<section class="section section--dark" id="stats">
+<div class="container">
+<div class="stats__grid">
+<div class="stat-block" data-reveal="fade-up" data-delay="1">
+<div class="stat-block__number" data-counter="150" data-suffix="+">0</div>
+<div class="stat-block__label">Projects Delivered</div>
+</div>
+<div class="stat-block" data-reveal="fade-up" data-delay="2">
+<div class="stat-block__number" data-counter="98" data-suffix="%">0</div>
+<div class="stat-block__label">Client Satisfaction</div>
+</div>
+<div class="stat-block" data-reveal="fade-up" data-delay="3">
+<div class="stat-block__number" data-counter="40" data-suffix="+">0</div>
+<div class="stat-block__label">Enterprise Clients</div>
+</div>
+<div class="stat-block" data-reveal="fade-up" data-delay="4">
+<div class="stat-block__number" data-counter="12" data-suffix="+">0</div>
+<div class="stat-block__label">Countries Served</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section section--glow" id="about">
+<div class="container">
+<div class="section-header" data-reveal="fade-up">
+<span class="label">Why TRIVEXA</span>
+<h2>Built For <span class="text-gradient">Scale & Excellence</span></h2>
+<p class="section-subtitle">We combine world-class engineering with premium design thinking to build digital experiences that drive real business results.</p>
+</div>
+<div class="why__grid">
+<div class="feature-card" data-reveal="fade-up" data-delay="1">
+<div class="feature-card__icon"><svg viewBox="0 0 24 24"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg></div>
+<h4 class="feature-card__title">Performance Engineering</h4>
+<p class="feature-card__text">Sub-second load times, optimized Core Web Vitals, and blazing-fast performance across all devices.</p>
+</div>
+<div class="feature-card" data-reveal="fade-up" data-delay="2">
+<div class="feature-card__icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+<h4 class="feature-card__title">SEO Architecture</h4>
+<p class="feature-card__text">Enterprise-grade SEO foundations that drive organic growth and long-term search visibility.</p>
+</div>
+<div class="feature-card" data-reveal="fade-up" data-delay="3">
+<div class="feature-card__icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+<h4 class="feature-card__title">Enterprise Security</h4>
+<p class="feature-card__text">Bank-grade security practices, encrypted infrastructure, and compliance-ready architecture.</p>
+</div>
+<div class="feature-card" data-reveal="fade-up" data-delay="4">
+<div class="feature-card__icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+<h4 class="feature-card__title">Premium Branding</h4>
+<p class="feature-card__text">Luxury-grade visual systems that communicate trust, authority, and modern sophistication.</p>
+</div>
+<div class="feature-card" data-reveal="fade-up" data-delay="5">
+<div class="feature-card__icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+<h4 class="feature-card__title">Scalable Systems</h4>
+<p class="feature-card__text">Cloud-native architecture built to handle millions of users with zero downtime.</p>
+</div>
+<div class="feature-card" data-reveal="fade-up" data-delay="6">
+<div class="feature-card__icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+<h4 class="feature-card__title">Conversion Focus</h4>
+<p class="feature-card__text">Data-driven optimization that maximizes leads, sales, and measurable business outcomes.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Tech Stack -->
+<section class="section section--dark" id="tech">
+<div class="container">
+<div class="section-header" data-reveal="fade-up">
+<span class="label">Technology</span>
+<h2>Our Tech <span class="text-gradient">Ecosystem</span></h2>
+<p class="section-subtitle">We leverage the most powerful modern technologies to build future-ready digital experiences.</p>
+</div>
+<div class="tech__grid" data-reveal="fade-up">
+<div class="tech-item"><div class="tech-item__icon">⚛️</div><span class="tech-item__name">React</span></div>
+<div class="tech-item"><div class="tech-item__icon">▲</div><span class="tech-item__name">Next.js</span></div>
+<div class="tech-item"><div class="tech-item__icon">📘</div><span class="tech-item__name">TypeScript</span></div>
+<div class="tech-item"><div class="tech-item__icon">🟢</div><span class="tech-item__name">Node.js</span></div>
+<div class="tech-item"><div class="tech-item__icon">🤖</div><span class="tech-item__name">AI Systems</span></div>
+<div class="tech-item"><div class="tech-item__icon">🍃</div><span class="tech-item__name">MongoDB</span></div>
+<div class="tech-item"><div class="tech-item__icon">☁️</div><span class="tech-item__name">AWS</span></div>
+<div class="tech-item"><div class="tech-item__icon">🔧</div><span class="tech-item__name">Cloud Infra</span></div>
+</div>
+</div>
+</section>
+
+<!-- Process -->
+<section class="section section--glow" id="process">
+<div class="container">
+<div class="section-header" data-reveal="fade-up">
+<span class="label">How We Work</span>
+<h2>Our Premium <span class="text-gradient">Process</span></h2>
+</div>
+<div class="process__track" data-reveal="fade-up">
+<div class="process__line"></div>
+<div class="process-step"><div class="process-step__number">01</div><h4 class="process-step__title">Discovery</h4><p class="process-step__text">Deep business analysis</p></div>
+<div class="process-step"><div class="process-step__number">02</div><h4 class="process-step__title">Strategy</h4><p class="process-step__text">Technical roadmap</p></div>
+<div class="process-step"><div class="process-step__number">03</div><h4 class="process-step__title">Research</h4><p class="process-step__text">Market & UX research</p></div>
+<div class="process-step"><div class="process-step__number">04</div><h4 class="process-step__title">Design</h4><p class="process-step__text">Premium UI/UX design</p></div>
+<div class="process-step"><div class="process-step__number">05</div><h4 class="process-step__title">Develop</h4><p class="process-step__text">Enterprise engineering</p></div>
+<div class="process-step"><div class="process-step__number">06</div><h4 class="process-step__title">Optimize</h4><p class="process-step__text">Performance tuning</p></div>
+<div class="process-step"><div class="process-step__number">07</div><h4 class="process-step__title">Launch</h4><p class="process-step__text">Premium deployment</p></div>
+</div>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section class="section section--glow" id="testimonials">
+<div class="container">
+<div class="section-header" data-reveal="fade-up">
+<span class="label">Client Stories</span>
+<h2>What Our Clients <span class="text-gradient">Say</span></h2>
+<p class="section-subtitle">Trusted by industry leaders and ambitious startups across the globe.</p>
+</div>
+</div>
+<div class="testimonials__track-wrapper" data-reveal="fade-up">
+<div class="testimonials__track">
+<div class="testimonial-card">
+<div class="testimonial-card__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+<p class="testimonial-card__quote">TRIVEXA transformed our entire digital presence. The quality of engineering and design exceeded every expectation we had.</p>
+<div class="testimonial-card__author"><div class="testimonial-card__avatar">AK</div><div><div class="testimonial-card__name">Arjun Kapoor</div><div class="testimonial-card__role">CTO, NexaFinance</div></div></div>
+</div>
+<div class="testimonial-card">
+<div class="testimonial-card__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+<p class="testimonial-card__quote">Working with TRIVEXA felt like partnering with an elite Silicon Valley team. Their attention to detail is absolutely world-class.</p>
+<div class="testimonial-card__author"><div class="testimonial-card__avatar">SM</div><div><div class="testimonial-card__name">Sarah Mitchell</div><div class="testimonial-card__role">VP of Product, CloudScale</div></div></div>
+</div>
+<div class="testimonial-card">
+<div class="testimonial-card__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+<p class="testimonial-card__quote">The SaaS platform TRIVEXA built for us handles 50K+ daily users flawlessly. Their engineering standards are truly enterprise-grade.</p>
+<div class="testimonial-card__author"><div class="testimonial-card__avatar">DP</div><div><div class="testimonial-card__name">David Park</div><div class="testimonial-card__role">CEO, DataPulse AI</div></div></div>
+</div>
+<div class="testimonial-card">
+<div class="testimonial-card__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+<p class="testimonial-card__quote">From concept to launch, TRIVEXA delivered a premium experience that positioned our brand as a market leader overnight.</p>
+<div class="testimonial-card__author"><div class="testimonial-card__avatar">RL</div><div><div class="testimonial-card__name">Rachel Liu</div><div class="testimonial-card__role">Founder, Elevate Commerce</div></div></div>
+</div>
+<div class="testimonial-card">
+<div class="testimonial-card__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+<p class="testimonial-card__quote">TRIVEXA's AI integration saved us 200+ hours per month. They don't just build — they engineer intelligent solutions.</p>
+<div class="testimonial-card__author"><div class="testimonial-card__avatar">MR</div><div><div class="testimonial-card__name">Marcus Rivera</div><div class="testimonial-card__role">COO, AutoFlow Systems</div></div></div>
+</div>
+<div class="testimonial-card">
+<div class="testimonial-card__stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+<p class="testimonial-card__quote">Exceptional quality at every level. The website they built converts 3x better than our previous platform.</p>
+<div class="testimonial-card__author"><div class="testimonial-card__avatar">JW</div><div><div class="testimonial-card__name">James Wong</div><div class="testimonial-card__role">Director, Prism Digital</div></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="section section--dark" id="contact">
+<div class="container">
+<div class="cta-section" data-reveal="fade-up">
+<div class="cta-section__glow"></div>
+<span class="label" style="justify-content:center;margin-bottom:2rem">Start Your Project</span>
+<h2 class="cta-section__title">Ready To Build Something <span class="text-gradient">Extraordinary?</span></h2>
+<p class="cta-section__desc">Partner with TRIVEXA to create a premium digital experience that sets your business apart on the global stage.</p>
+<a href="mailto:hello@trivexa.com" class="btn btn--primary btn--lg">Start A Project <span class="btn-arrow">→</span></a>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer__grid">
+<div>
+<a href="index.html" class="nav__logo">TRIV<span>EXA</span></a>
+<p class="footer__brand-desc">Engineering premium digital experiences for ambitious modern businesses worldwide.</p>
+</div>
+<div>
+<h4 class="footer__heading">Company</h4>
+<div class="footer__links">
+<a href="#about" class="footer__link">About</a>
+<a href="#services" class="footer__link">Services</a>
+<a href="#projects" class="footer__link">Projects</a>
+<a href="#contact" class="footer__link">Contact</a>
+</div>
+</div>
+<div>
+<h4 class="footer__heading">Services</h4>
+<div class="footer__links">
+<a href="#" class="footer__link">Web Development</a>
+<a href="#" class="footer__link">SaaS Engineering</a>
+<a href="#" class="footer__link">AI Solutions</a>
+<a href="#" class="footer__link">UI/UX Design</a>
+</div>
+</div>
+<div>
+<h4 class="footer__heading">Connect</h4>
+<div class="footer__links">
+<a href="#" class="footer__link">LinkedIn</a>
+<a href="#" class="footer__link">Twitter / X</a>
+<a href="#" class="footer__link">GitHub</a>
+<a href="#" class="footer__link">hello@trivexa.com</a>
+</div>
+</div>
+</div>
+<hr class="separator">
+<div class="footer__bottom" style="margin-top:2rem">
+<p class="footer__copy">© 2026 TRIVEXA. All rights reserved.</p>
+<p class="footer__parent">A TRIYARA ENTERPRISES COMPANY</p>
+</div>
+</div>
+</footer>
+
+<script src="js/particles.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

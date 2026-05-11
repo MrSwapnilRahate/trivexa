@@ -1,5 +1,6 @@
 /* ============================================
    TRIVEXA — Responsive System
+   Premium breakpoint architecture
    ============================================ */
 
 /* ── Tablet (1024px) ── */
@@ -32,6 +33,14 @@
 
   .contact-form { grid-template-columns: 1fr; }
   .form-group--full { grid-column: 1; }
+
+  .process__track {
+    justify-content: flex-start;
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+
+  .process-step { flex: 0 0 150px; }
 }
 
 /* ── Mobile (768px) ── */
@@ -48,12 +57,19 @@
 
   .testimonial-card { min-width: 300px; padding: var(--space-8); }
 
-  .process__track { justify-content: flex-start; overflow-x: auto; padding-bottom: var(--space-8); }
-  .process__line { width: 90%; }
+  .process__track { 
+    justify-content: flex-start; 
+    overflow-x: auto; 
+    padding-bottom: var(--space-8);
+  }
+  .process__line { left: 5%; right: 5%; }
+  .process-step { flex: 0 0 140px; }
 
   .page-header { padding: clamp(6rem, 10vw, 8rem) 0 var(--space-12); }
 
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
+
+  .trust__label { font-size: var(--text-xs); margin-bottom: var(--space-8); }
 }
 
 /* ── Small Mobile (480px) ── */
@@ -67,17 +83,24 @@
 
   .btn--lg { padding: 16px 32px; }
 
-  .trust__logo { font-size: var(--text-xl); }
+  .trust__logo { font-size: var(--text-lg); }
 
   .service-card { padding: var(--space-8); }
 
   .why__stats { grid-template-columns: 1fr; }
-  .stats__grid { grid-template-columns: 1fr; }
+  .stats__grid { grid-template-columns: 1fr 1fr; }
   .tech__grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+
+  .process-step { flex: 0 0 120px; }
+  .process-step__number { width: 44px; height: 44px; font-size: var(--text-xs); }
 
   .cta-section__title { font-size: var(--text-3xl); }
 
   .testimonial-card { min-width: 280px; }
+
+  .section-header h2 { font-size: var(--text-3xl); }
+
+  .stat-block__number { font-size: var(--text-4xl); }
 }
 
 /* ── Large Desktop (1920px+) ── */
@@ -95,9 +118,10 @@
     position: fixed; top: 0; left: 0;
     pointer-events: none;
     z-index: var(--z-cursor);
-    transition: width 0.2s, height 0.2s, border-color 0.2s, background 0.2s;
+    transition: width 0.3s var(--ease-out), height 0.3s var(--ease-out), border-color 0.3s, background 0.3s;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
+    will-change: transform;
   }
 
   .custom-cursor--hover {

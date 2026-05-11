@@ -1,5 +1,6 @@
 /* ============================================
    TRIVEXA — Animation System
+   Cinematic motion design engine
    ============================================ */
 
 /* ── Scroll Reveal States ── */
@@ -81,11 +82,26 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes border-glow {
+  0%, 100% { border-color: rgba(212,175,55,0.12); }
+  50% { border-color: rgba(212,175,55,0.3); }
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
 /* ── Chart Animation ── */
 .chart-line {
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  animation: dash 2s ease-out forwards;
+  animation: dash 2.5s ease-out forwards 0.5s;
 }
 
 /* ── Hover Glow ── */
@@ -116,18 +132,61 @@
   background: var(--bg-primary);
   display: flex; align-items: center; justify-content: center;
   z-index: 100;
-  transition: opacity 0.5s var(--ease-out);
+  transition: opacity 0.6s var(--ease-out), visibility 0.6s;
 }
 
 .loading-screen.hidden {
-  opacity: 0; pointer-events: none;
+  opacity: 0; 
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .loading-logo {
-  font-size: 2rem; font-weight: var(--weight-bold);
+  font-size: 2.2rem; font-weight: var(--weight-bold);
   letter-spacing: var(--tracking-wider);
   color: var(--text-primary);
   animation: glow-pulse 1.5s ease-in-out infinite;
 }
 
 .loading-logo span { color: var(--gold); }
+
+/* ── Gradient border animation for premium cards ── */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(212,175,55,0.3), transparent 40%, transparent 60%, rgba(212,175,55,0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
+/* ── Text shimmer for premium headings ── */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--gold) 0%,
+    var(--gold-highlight) 25%,
+    var(--gold) 50%,
+    var(--gold-highlight) 75%,
+    var(--gold) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
