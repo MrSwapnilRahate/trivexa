@@ -1,0 +1,133 @@
+/* ============================================
+   TRIVEXA — Animation System
+   ============================================ */
+
+/* ── Scroll Reveal States ── */
+[data-reveal] {
+  opacity: 0;
+  transition: all var(--duration-slow) var(--ease-out);
+  will-change: transform, opacity;
+}
+
+[data-reveal].revealed { opacity: 1; }
+
+[data-reveal="fade-up"] { transform: translateY(40px); }
+[data-reveal="fade-up"].revealed { transform: translateY(0); }
+
+[data-reveal="fade-in"] { transform: none; }
+
+[data-reveal="slide-left"] { transform: translateX(-60px); }
+[data-reveal="slide-left"].revealed { transform: translateX(0); }
+
+[data-reveal="slide-right"] { transform: translateX(60px); }
+[data-reveal="slide-right"].revealed { transform: translateX(0); }
+
+[data-reveal="scale-in"] { transform: scale(0.92); }
+[data-reveal="scale-in"].revealed { transform: scale(1); }
+
+/* Stagger Delays */
+[data-delay="1"] { transition-delay: 100ms; }
+[data-delay="2"] { transition-delay: 200ms; }
+[data-delay="3"] { transition-delay: 300ms; }
+[data-delay="4"] { transition-delay: 400ms; }
+[data-delay="5"] { transition-delay: 500ms; }
+[data-delay="6"] { transition-delay: 600ms; }
+[data-delay="7"] { transition-delay: 700ms; }
+[data-delay="8"] { transition-delay: 800ms; }
+
+/* ── Keyframe Animations ── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(-5px) rotate(-1deg); }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes dash {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Chart Animation ── */
+.chart-line {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 2s ease-out forwards;
+}
+
+/* ── Hover Glow ── */
+.hover-glow {
+  position: relative;
+}
+
+.hover-glow::before {
+  content: '';
+  position: absolute; inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(212,175,55,0.15), transparent, rgba(212,175,55,0.1));
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-out);
+  z-index: -1;
+}
+
+.hover-glow:hover::before { opacity: 1; }
+
+/* ── Page Transition ── */
+.page-transition {
+  animation: fade-in-up 0.6s var(--ease-out) both;
+}
+
+/* ── Loading State ── */
+.loading-screen {
+  position: fixed; inset: 0;
+  background: var(--bg-primary);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100;
+  transition: opacity 0.5s var(--ease-out);
+}
+
+.loading-screen.hidden {
+  opacity: 0; pointer-events: none;
+}
+
+.loading-logo {
+  font-size: 2rem; font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wider);
+  color: var(--text-primary);
+  animation: glow-pulse 1.5s ease-in-out infinite;
+}
+
+.loading-logo span { color: var(--gold); }
