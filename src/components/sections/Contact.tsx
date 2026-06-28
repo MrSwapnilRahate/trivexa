@@ -21,15 +21,32 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/contact", {
+      // Submit directly to Web3Forms (browser-side)
+      const web3formsData = {
+        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+        name: formState.name,
+        email: formState.email,
+        company: formState.company || "Not provided",
+        budget: formState.budget || "Not specified",
+        message: formState.message,
+        from_name: "TRIVEXA Contact Form",
+        subject: `New Inquiry from ${formState.name}`,
+      };
+
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formState),
+        body: JSON.stringify(web3formsData),
       });
-      if (response.ok) {
+
+      const result = await response.json();
+
+      if (result.success) {
         setSubmitted(true);
         setTimeout(() => setSubmitted(false), 4000);
         setFormState({ name: "", email: "", company: "", budget: "", message: "" });
+      } else {
+        console.error("Web3Forms error:", result);
       }
     } catch (error) {
       console.error("Contact form error:", error);
