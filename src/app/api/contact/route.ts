@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
   try {
     const body: ContactFormData = await request.json();
 
-    const { name, email, company, budget, message } = body;
+    const { name, email, company, message } = body;
 
     // Validation
     if (!name || !email || !message) {

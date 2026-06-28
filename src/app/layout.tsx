@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA";
+import { Analytics } from "@/components/Analytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -324,6 +326,8 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <StickyMobileCTA />
+        <Analytics />
       </body>
     </html>
   );
