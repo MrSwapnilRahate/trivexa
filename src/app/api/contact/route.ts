@@ -29,9 +29,19 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Check if access key is set
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+    if (!accessKey) {
+      console.error("NEXT_PUBLIC_WEB3FORMS_KEY is not set in environment");
+      return NextResponse.json(
+        { error: "Contact form is not configured. Please check environment variables." },
+        { status: 500 }
+      );
+    }
+
     // Prepare Web3Forms submission
     const formData = new FormData();
-    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "");
+    formData.append("access_key", accessKey);
     formData.append("name", name);
     formData.append("email", email);
     formData.append("company", company);
@@ -49,9 +59,13 @@ export async function POST(request: NextRequest) {
     const result = await response.json();
 
     if (!result.success) {
-      console.error("Web3Forms error:", result);
+      console.error("Web3Forms error:", {
+        success: result.success,
+        message: result.message,
+        status: response.status,
+      });
       return NextResponse.json(
-        { error: "Failed to submit form" },
+        { error: result.message || "Failed to submit form" },
         { status: 500 }
       );
     }
