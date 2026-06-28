@@ -10,7 +10,7 @@ export const siteConfig = {
   description:
     "TRIVEXA builds enterprise-grade digital platforms, SaaS products and AI-powered experiences for ambitious modern businesses worldwide.",
   url: "https://trivexa.com",
-  email: "hello@trivexa.com",
+  email: "swapnilrahate6598@gmail.com",
   phone: "+1 (555) 123-4567",
   parent: "A TRIYARA ENTERPRISES COMPANY",
   founded: "2024",
