@@ -1,0 +1,41 @@
+# TRIVEXA
+
+> TRIVEXA is a premium software development company specializing in enterprise-grade digital platforms, SaaS products, and AI-powered experiences. Founded in 2024. A Triyara Enterprises company.
+
+## About
+
+TRIVEXA builds world-class digital solutions for ambitious businesses. We are a team of senior engineers, designers, and strategists with expertise in fintech, healthtech, e-commerce, and enterprise SaaS. We serve clients across 15+ countries with a 99% client satisfaction rate.
+
+## Services
+
+- Enterprise Website Development: Premium, high-converting websites with 90+ Lighthouse scores
+- SaaS Product Engineering: Full-stack multi-tenant SaaS from concept to scale
+- AI & Machine Learning Solutions: LLM integration, NLP, computer vision, predictive analytics
+- UI/UX Architecture: Research-driven design systems
+- Mobile App Development: React Native and Flutter cross-platform apps
+- Cloud & DevOps: AWS, GCP, Azure infrastructure with Kubernetes
+- Digital Transformation: Legacy modernization and process automation
+- Performance & CRO: Conversion rate optimization with A/B testing
+
+## Pricing
+
+- Starter: From $3,000 (websites up to 8 pages, 2-3 weeks delivery)
+- Growth: From $10,000 (full-stack web apps, 4-6 weeks delivery)
+- Enterprise: Custom pricing (dedicated teams, SLAs, 24/7 support)
+
+## Guarantees
+
+- 100% Satisfaction Guarantee
+- On-Time Delivery Promise (15% credit if missed)
+- Full IP & Code Ownership
+- 14-Day Risk-Free Trial
+
+## Technologies
+
+React, Next.js, TypeScript, Node.js, Python, AWS, GCP, Azure, Docker, Kubernetes, GraphQL, Redis, MongoDB, PostgreSQL, TensorFlow, OpenAI
+
+## Contact
+
+- Email: hello@trivexa.com
+- Website: https://trivexa.com
+- LinkedIn: https://linkedin.com/company/trivexa

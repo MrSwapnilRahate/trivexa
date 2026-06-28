@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#050816"/>
+  <text x="128" y="180" font-family="Arial, sans-serif" font-size="140" font-weight="bold" fill="#D4AF37" text-anchor="middle" dominant-baseline="middle">E</text>
+  <path d="M 180 80 L 200 80 L 200 100 L 180 100 Z" fill="#D4AF37" opacity="0.6"/>
+</svg>
