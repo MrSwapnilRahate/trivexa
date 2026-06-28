@@ -31,44 +31,62 @@ export async function POST(request: NextRequest) {
 
     // Check if access key is set
     const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+    console.log("🔑 Checking Web3Forms key:", accessKey ? "✅ Set" : "❌ Missing");
+
     if (!accessKey) {
-      console.error("NEXT_PUBLIC_WEB3FORMS_KEY is not set in environment");
+      console.error("❌ NEXT_PUBLIC_WEB3FORMS_KEY is not set in environment");
       return NextResponse.json(
-        { error: "Contact form is not configured. Please check environment variables." },
+        { error: "Contact form is not configured. Please set NEXT_PUBLIC_WEB3FORMS_KEY" },
         { status: 500 }
       );
     }
 
-    // Prepare Web3Forms submission
-    const formData = new FormData();
-    formData.append("access_key", accessKey);
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("company", company);
-    formData.append("budget", budget);
-    formData.append("message", message);
-    formData.append("from_name", "TRIVEXA Contact Form");
-    formData.append("subject", `New Inquiry from ${name}`);
+    // Prepare data for Web3Forms (using JSON)
+    const web3formsData = {
+      access_key: accessKey,
+      name: name,
+      email: email,
+      company: company || "Not provided",
+      budget: budget || "Not specified",
+      message: message,
+      from_name: "TRIVEXA Contact Form",
+      subject: `New Inquiry from ${name}`,
+    };
+
+    console.log("📤 Sending to Web3Forms:", {
+      name,
+      email,
+      company,
+      budget,
+      accessKeyLength: accessKey.length
+    });
 
     // Send to Web3Forms
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(web3formsData),
     });
 
     const result = await response.json();
 
+    console.log("📨 Web3Forms Response:", {
+      success: result.success,
+      message: result.message,
+      status: response.status,
+    });
+
     if (!result.success) {
-      console.error("Web3Forms error:", {
-        success: result.success,
-        message: result.message,
-        status: response.status,
-      });
+      console.error("❌ Web3Forms submission failed:", result);
       return NextResponse.json(
-        { error: result.message || "Failed to submit form" },
+        { error: result.message || "Failed to submit form to Web3Forms" },
         { status: 500 }
       );
     }
+
+    console.log("✅ Form submitted successfully to Web3Forms");
 
     return NextResponse.json(
       {
