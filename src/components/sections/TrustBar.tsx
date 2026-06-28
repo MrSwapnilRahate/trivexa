@@ -8,7 +8,7 @@ export function TrustBar() {
   return (
     <section className="py-16 border-t border-white/[0.04] border-b border-b-white/[0.04] overflow-hidden">
       <p className="text-center mb-12 text-xs font-medium tracking-[0.15em] uppercase text-text-tertiary">
-        Trusted By Industry Leaders
+        Built With Industry-Leading Technology
       </p>
       <div
         className="flex gap-16 w-max animate-ticker"

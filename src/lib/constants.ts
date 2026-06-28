@@ -30,16 +30,21 @@ export const navigation = [
   { label: "Contact", href: "#contact" },
 ];
 
-// ── Trust Logos (Marquee) ──
+// ── Technology Marquee ──
+// Platforms & tools we build with. Kept truthful: these are technologies
+// in our stack, NOT claimed clients. Swap to real client names only once
+// you have signed permission to display their brand.
 export const trustLogos = [
-  "Microsoft",
-  "Google",
-  "Amazon",
-  "Stripe",
-  "Shopify",
+  "AWS",
+  "Google Cloud",
+  "Azure",
   "Vercel",
-  "Netflix",
-  "Airbnb",
+  "Stripe",
+  "Docker",
+  "Kubernetes",
+  "PostgreSQL",
+  "OpenAI",
+  "React",
 ];
 
 // ── Competitive: Trust Badges & Certifications ──
